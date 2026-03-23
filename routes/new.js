@@ -10,7 +10,12 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   const { message, user } = req.body;
-  messages.push({ text: message, user: user, added: new Date() });
+  messages.push({
+    id: crypto.randomUUID(),
+    text: message,
+    user: user,
+    added: new Date(),
+  });
   console.log(req.body);
   res.redirect("/");
 });
