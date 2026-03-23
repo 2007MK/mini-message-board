@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <form action="/new" method="get">
+        <button type="submit">Add New Message</button>
+    </form>
+    <% messages.forEach((message) => { %>
+        <div class="message">
+            <h3 class="message-text"><%= message.text %></h3>
+            <h5 class="message-text"><%= message.user %></h5>
+            <h6 class="message-text"><%= message.added %></h6>
+        </div>
+    <% }) %>
+</body>
+</html>
