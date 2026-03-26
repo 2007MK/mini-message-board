@@ -1,4 +1,22 @@
 {
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "1. Style the application 2. Use Controllers (MVC Pattern) 3. EDIT, DELETE methods 4. Use Partials to show navbar and footer in each route",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2007MK/mini-message-board.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2007MK/mini-message-board/issues"
+  },
+  "homepage": "https://github.com/2007MK/mini-message-board#readme",
   "dependencies": {
     "ejs": "^5.0.1",
     "express": "^5.2.1"
