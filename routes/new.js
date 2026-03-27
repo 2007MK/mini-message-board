@@ -1,6 +1,7 @@
 const express = require("express");
-const { messages } = require("./index");
 const { Router } = express;
+
+const { postMessage } = require("../controllers/messageController");
 
 const router = Router();
 
@@ -8,16 +9,6 @@ router.get("/", (req, res) => {
   res.render("form");
 });
 
-router.post("/", (req, res) => {
-  const { message, user } = req.body;
-  messages.push({
-    id: crypto.randomUUID(),
-    text: message,
-    user: user,
-    added: new Date(),
-  });
-  console.log(req.body);
-  res.redirect("/");
-});
+router.post("/", postMessage);
 
 module.exports = router;
